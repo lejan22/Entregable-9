@@ -18,7 +18,10 @@ public class DataPersistance : MonoBehaviour
         return PlayerPrefs.GetString(key);
     }
 
-    
+    public int GetInt(string key)
+    {
+        return PlayerPrefs.GetInt(key);
+    }
 
     //setting
 
@@ -33,8 +36,12 @@ public class DataPersistance : MonoBehaviour
         PlayerPrefs.SetString(key, "value");
         PlayerPrefs.Save();
     }
-    
 
+    public void SetInt(string key, int value)
+    {
+        PlayerPrefs.SetInt(key, value);
+        PlayerPrefs.Save();
+    }
 
 
 

@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class Options : MonoBehaviour
 {
     public TMP_InputField inputfield;
+    public TMP_InputField updatedInputfield;
     public AudioSource audiosource;
     public Slider slider;
     private DataPersistance dataPersistence;
@@ -80,7 +81,7 @@ public class Options : MonoBehaviour
         }
         inputfield.text = PlayerPrefs.GetString("NumFavo");
     }
-    
+   
 
     public void Play(string sceneName)
     {
