@@ -704,6 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputfield: {fileID: 0}
+  updatedInputfield: {fileID: 0}
   audiosource: {fileID: 0}
   slider: {fileID: 0}
 --- !u!114 &218789090
@@ -1093,6 +1094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputfield: {fileID: 1543967933}
+  updatedInputfield: {fileID: 0}
   audiosource: {fileID: 1583106338}
   slider: {fileID: 881357743}
 --- !u!4 &713411639
