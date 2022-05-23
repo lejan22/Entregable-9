@@ -37,7 +37,7 @@ public class Options : MonoBehaviour
     public void SetVolume(float volume)
     {
         slider.value = volume;
-        dataPersistence.SetFloat("Music Volume", volume);
+        PlayerPrefs.SetFloat("Music Volume", volume);
     }
 
     public void GetMusicVolume()
@@ -49,7 +49,7 @@ public class Options : MonoBehaviour
         }
 
         // Obtiene el valor guardado
-        slider.value = dataPersistence.GetFloat("Music Volume");
+        slider.value = PlayerPrefs.GetFloat("Music Volume");
     }
 
     public void changeVolume(float volume)
@@ -69,17 +69,18 @@ public class Options : MonoBehaviour
 
     public void setnumfavo(string numero)
     {
-        dataPersistence.SetString("Numfavo", numero);
+        PlayerPrefs.SetString("Numfavo", numero);
     }
 
     public void Getnumfavo()
     {
-        if (!dataPersistence.HasKey("Favnum"))
+        if (!dataPersistence.HasKey("NumFavo"))
         {
             setnumfavo(DefaultFavonum);
         }
-        inputfield.text = dataPersistence.GetString("Favnum");
+        inputfield.text = PlayerPrefs.GetString("NumFavo");
     }
+    
 
     public void Play(string sceneName)
     {
@@ -90,5 +91,6 @@ public class Options : MonoBehaviour
     private void loadsettings()
     {
         GetMusicVolume();
+        Getnumfavo();
     }
 }
